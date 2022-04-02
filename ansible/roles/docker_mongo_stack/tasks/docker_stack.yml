@@ -1,0 +1,16 @@
+---
+- name: Copy docker stack to swarm_manager
+  copy:
+    src: docker-compose.yml
+    dest: /tmp/docker-compose.yml
+  when: inventory_hostname == groups['swarm_managers'][0]
+
+- name: Mongo Swarm - Deploying Mongo Docker Stack
+  community.docker.docker_stack:
+    state: present
+    name: mongo
+    resolve_image: never
+    compose:
+      - /tmp/docker-compose.yml
+    with_registry_auth: yes
+  when: inventory_hostname == groups['swarm_managers'][0]

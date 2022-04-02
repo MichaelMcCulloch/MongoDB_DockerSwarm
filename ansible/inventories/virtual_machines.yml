@@ -3,10 +3,32 @@ all:
     ungrouped: {}
     datacenter:
       hosts:
-        manager-[01:02].datacenter.local:
-        data-[01:03].datacenter.local:
-        config-[01:03].datacenter.local:
-        mongo-[01:02].datacenter.local:
+        manager-01.datacenter.local:
+        manager-02.datacenter.local:
+        data-01.datacenter.local:
+          mongo_id: d-01
+          is_app: no
+        data-02.datacenter.local:
+          mongo_id: d-02
+          is_app: no
+        data-03.datacenter.local:
+          mongo_id: d-03
+          is_app: no
+        config-01.datacenter.local:
+          mongo_id: c-01
+          is_app: no
+        config-02.datacenter.local:
+          mongo_id: c-02
+          is_app: no
+        config-03.datacenter.local:
+          mongo_id: c-03
+          is_app: no
+        mongo-01.datacenter.local:
+          mongo_id: m-01
+          is_app: yes
+        mongo-02.datacenter.local:
+          mongo_id: m-02
+          is_app: yes
     swarm_managers:
       hosts:
         manager-[01:02].datacenter.local:

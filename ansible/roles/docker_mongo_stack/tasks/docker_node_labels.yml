@@ -1,0 +1,16 @@
+---
+- name: Mongo Swarm - Adding Docker Node lables for Mongo instances
+  docker_node:
+    hostname: "{{hostvars[item]['inventory_hostname_short'] }}"
+    labels:
+      mongo.replica: "{{ hostvars[item]['mongo_id'] }}"
+  when: inventory_hostname == groups['swarm_managers'][0]
+  with_items: "{{ groups['swarm_workers'] }}"
+
+- name: Mongo Swarm - Adding Docker Node lables for App instances
+  docker_node:
+    hostname: "{{ hostvars[item]['inventory_hostname_short'] }}"
+    labels:
+      app.replica: "{{ hostvars[item]['is_app'] | string }}"
+  when: inventory_hostname == groups['swarm_managers'][0]
+  with_items: "{{ groups['swarm_workers'] }}"
