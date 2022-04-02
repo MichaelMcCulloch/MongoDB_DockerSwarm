@@ -1,0 +1,12 @@
+---
+- hosts: datacenter
+  roles:
+    - datacenter_base
+
+- hosts: swarm_managers:swarm_workers
+  roles:
+    - docker_swarm
+
+- hosts: swarm_managers
+  roles:
+    - docker_registry_service

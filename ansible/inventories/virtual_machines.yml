@@ -1,0 +1,20 @@
+all:
+  children:
+    ungrouped: {}
+    datacenter:
+      hosts:
+        manager-[01:02].datacenter.local:
+        data-[01:03].datacenter.local:
+        config-[01:03].datacenter.local:
+        mongo-[01:02].datacenter.local:
+    swarm_managers:
+      hosts:
+        manager-[01:02].datacenter.local:
+    swarm_workers:
+      hosts:
+        data-[01:03].datacenter.local:
+        config-[01:03].datacenter.local:
+        mongo-[01:02].datacenter.local:
+    app_workers:
+      hosts:
+        mongo-[01:02].datacenter.local:

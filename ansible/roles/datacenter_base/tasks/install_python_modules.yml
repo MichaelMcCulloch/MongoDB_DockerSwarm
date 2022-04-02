@@ -1,0 +1,5 @@
+---
+- name: Install Python modules
+  pip:
+    name: "{{ pip_extra_packages }}"
+  tags: [docker, python]

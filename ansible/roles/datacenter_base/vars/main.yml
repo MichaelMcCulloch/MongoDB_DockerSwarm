@@ -1,0 +1,12 @@
+pacman_extra_packages:
+  - docker
+  - docker-compose
+  - python-pip
+
+pip_extra_packages:
+  - docker[tls]
+  - docker-compose
+  - ndg-httpsclient
+  - pyOpenSSL
+  - pyasn1
+  - jsondiff

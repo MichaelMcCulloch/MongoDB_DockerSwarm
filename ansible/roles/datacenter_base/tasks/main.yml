@@ -1,0 +1,11 @@
+---
+- name: Install additional packages
+  import_tasks: install_additional_packages.yml
+
+- name: Install Python modules
+  import_tasks: install_python_modules.yml
+
+- name: expose Port 2375 for docker API
+  import_tasks: expose_port_for_docker_api.yml
+  notify:
+    - Restart docker

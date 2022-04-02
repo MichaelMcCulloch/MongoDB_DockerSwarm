@@ -1,0 +1,6 @@
+---
+- name: Install additional packages
+  pacman:
+    name: "{{ pacman_extra_packages }}"
+    state: present
+  tags: [docker]

@@ -1,0 +1,2 @@
+ansible/roles/docker_registry_service/files/*.tar.xz
+.vagrant
