@@ -1,0 +1,17 @@
+---
+- hosts: mongo_config:mongo_app:mongo_data
+  gather_facts: no
+  roles:
+    - mongo_dependencies
+
+- hosts: mongo_config
+  roles:
+    - mongo_config
+
+- hosts: mongo_data
+  roles:
+    - mongo_data
+
+- hosts: mongo_app
+  roles:
+    - mongo_app

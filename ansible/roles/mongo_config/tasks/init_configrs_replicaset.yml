@@ -1,0 +1,9 @@
+---
+- name: Initialize Configrs replicaset
+  mongodb_replicaset:
+    replica_set: configrs
+    members:
+      - host: "c-01:27017"
+      - host: "c-02:27017"
+      - host: "c-03:27017"
+  when: inventory_hostname == groups['mongo_config'][0]

@@ -1,0 +1,5 @@
+---
+- name: Initialize Shard
+  mongodb_shard:
+    shard: "datars/d-01"
+  when: inventory_hostname == groups['mongo_app'][0]

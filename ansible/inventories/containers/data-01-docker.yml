@@ -1,7 +1,7 @@
 plugin: community.docker.docker_containers
 docker_host: tcp://data-01.datacenter.local:2375
 groups:
-  mongo: "'mongo_mongo' in inventory_hostname"
-  config: "'mongo_config' in inventory_hostname"
-  data: "'mongo_data' in inventory_hostname"
-  registry: "'registry' in inventory_hostname"
+  mongo_app: "'mongo_m' in inventory_hostname"
+  mongo_config: "'mongo_c' in inventory_hostname"
+  mongo_data: "'mongo_d' in inventory_hostname"
+  docker_registry: "'registry' in inventory_hostname"

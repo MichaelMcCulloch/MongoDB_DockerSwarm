@@ -1,0 +1,9 @@
+---
+- name: Initialize Datars replicaset
+  mongodb_replicaset:
+    replica_set: datars
+    members:
+      - host: "d-01:27017"
+      - host: "d-02:27017"
+      - host: "d-03:27017"
+  when: inventory_hostname == groups['mongo_data'][0]

@@ -1,0 +1,2 @@
+- name: Initialize Configrs replicaset
+  import_tasks: init_configrs_replicaset.yml
