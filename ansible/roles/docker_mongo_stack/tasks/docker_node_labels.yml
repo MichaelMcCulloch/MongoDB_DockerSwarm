@@ -11,6 +11,6 @@
   docker_node:
     hostname: "{{ hostvars[item]['inventory_hostname_short'] }}"
     labels:
-      app.replica: "{{ hostvars[item]['is_app'] | string }}"
+      app.replica: "{{ hostvars[item]['is_router'] | string }}"
   when: inventory_hostname == groups['swarm_managers'][0]
   with_items: "{{ groups['swarm_workers'] }}"

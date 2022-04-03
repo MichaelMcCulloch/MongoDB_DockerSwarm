@@ -59,10 +59,10 @@ Vagrant.configure("2") do |config|
     end
 
     (1..2).each do |i|
-      name = "mongo-#{i.to_s.rjust(2, "0")}"
+      name = "router-#{i.to_s.rjust(2, "0")}"
 
-      config.vm.define "#{name}" do |mongo_machine|
-        mongo_machine.vm.hostname = "#{name}"
+      config.vm.define "#{name}" do |query_router_machine|
+      query_router_machine.vm.hostname = "#{name}"
       end
 
     end

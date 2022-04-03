@@ -1,5 +1,5 @@
 ---
-- hosts: mongo_config:mongo_app:mongo_data
+- hosts: mongo_config:mongo_router:mongo_data
   gather_facts: no
   roles:
     - mongo_dependencies
@@ -12,6 +12,6 @@
   roles:
     - mongo_data
 
-- hosts: mongo_app
+- hosts: mongo_router
   roles:
-    - mongo_app
+    - mongo_router

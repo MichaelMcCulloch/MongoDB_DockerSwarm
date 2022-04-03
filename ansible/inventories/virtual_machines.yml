@@ -7,28 +7,28 @@ all:
         manager-02.datacenter.local:
         data-01.datacenter.local:
           mongo_id: d-01
-          is_app: no
+          is_router: no
         data-02.datacenter.local:
           mongo_id: d-02
-          is_app: no
+          is_router: no
         data-03.datacenter.local:
           mongo_id: d-03
-          is_app: no
+          is_router: no
         config-01.datacenter.local:
           mongo_id: c-01
-          is_app: no
+          is_router: no
         config-02.datacenter.local:
           mongo_id: c-02
-          is_app: no
+          is_router: no
         config-03.datacenter.local:
           mongo_id: c-03
-          is_app: no
-        mongo-01.datacenter.local:
-          mongo_id: m-01
-          is_app: yes
-        mongo-02.datacenter.local:
-          mongo_id: m-02
-          is_app: yes
+          is_router: no
+        router-01.datacenter.local:
+          mongo_id: q-01
+          is_router: yes
+        router-02.datacenter.local:
+          mongo_id: q-02
+          is_router: yes
     swarm_managers:
       hosts:
         manager-[01:02].datacenter.local:
@@ -36,7 +36,7 @@ all:
       hosts:
         data-[01:03].datacenter.local:
         config-[01:03].datacenter.local:
-        mongo-[01:02].datacenter.local:
+        router-[01:02].datacenter.local:
     app_workers:
       hosts:
-        mongo-[01:02].datacenter.local:
+        router-[01:02].datacenter.local:

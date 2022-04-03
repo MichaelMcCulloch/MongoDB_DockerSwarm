@@ -90,7 +90,7 @@ services:
         constraints:
           - node.labels.mongo.replica == c-03
 
-  m-01:
+  q-01:
     image: 127.0.0.0:5000/mongo:5.0.6-focal
     networks:
       - mongo
@@ -103,9 +103,9 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.mongo.replica == m-01
+          - node.labels.mongo.replica == q-01
 
-  m-02:
+  q-02:
     image: 127.0.0.0:5000/mongo:5.0.6-focal
     networks:
       - mongo
@@ -118,4 +118,4 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.mongo.replica == m-02
+          - node.labels.mongo.replica == q-02
