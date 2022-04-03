@@ -10,3 +10,13 @@ Your local dns server should be search datacenter.local on the subnet 172.28.128
 1. `cd ansible`
 1. `ansible-playbook -i inventories/ deploy_datacenter_base.yml -u root`
 1. `ansible-playbook -i inventories/ init_mongo_swarm.yml -u root`
+
+## FAQ
+
+1. Q: What does it do?
+    
+    A: Exist
+
+2. Q: Anything else?
+
+    A: No
