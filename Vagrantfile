@@ -18,8 +18,8 @@ Vagrant.configure("2") do |config|
     config.vm.synced_folder "./data", "/data", type: "rsync", rsync__auto: true, mount_options: ["dmode=777,fmode=777"]
   
     config.vm.provider "libvirt" do |lv|
-      lv.memory = 4096
-      lv.cpus = 4
+      lv.memory = 8192
+      lv.cpus = 32
       lv.nested = true
     end
 
