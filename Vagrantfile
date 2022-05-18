@@ -62,7 +62,7 @@ Vagrant.configure("2") do |config|
       name = "router-#{i.to_s.rjust(2, "0")}"
 
       config.vm.define "#{name}" do |query_router_machine|
-      query_router_machine.vm.hostname = "#{name}"
+        query_router_machine.vm.hostname = "#{name}"
       end
 
     end
