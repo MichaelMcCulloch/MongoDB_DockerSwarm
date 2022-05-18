@@ -1,0 +1,5 @@
+- name: Copy docker config files to hosts
+  copy:
+    src: daemon.json
+    dest: /etc/docker/
+    backup: no

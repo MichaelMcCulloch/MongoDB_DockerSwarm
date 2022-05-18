@@ -7,7 +7,7 @@ networks:
 
 services:
   d-01:
-    image: 127.0.0.0:5000/mongo:5.0.6-focal
+    image: mongo:5.0.6-focal
     networks:
       - mongo
     volumes:
@@ -21,7 +21,7 @@ services:
           - node.labels.mongo.replica ==  d-01
 
   d-02:
-    image: 127.0.0.0:5000/mongo:5.0.6-focal
+    image: mongo:5.0.6-focal
     networks:
       - mongo
     volumes:
@@ -35,7 +35,7 @@ services:
           - node.labels.mongo.replica == d-02
 
   d-03:
-    image: 127.0.0.0:5000/mongo:5.0.6-focal
+    image: mongo:5.0.6-focal
     networks:
       - mongo
     volumes:
@@ -49,7 +49,7 @@ services:
           - node.labels.mongo.replica == d-03
 
   c-01:
-    image: 127.0.0.0:5000/mongo:5.0.6-focal
+    image: mongo:5.0.6-focal
     networks:
       - mongo
     volumes:
@@ -63,7 +63,7 @@ services:
           - node.labels.mongo.replica == c-01
 
   c-02:
-    image: 127.0.0.0:5000/mongo:5.0.6-focal
+    image: mongo:5.0.6-focal
     networks:
       - mongo
     volumes:
@@ -77,7 +77,7 @@ services:
           - node.labels.mongo.replica == c-02
 
   c-03:
-    image: 127.0.0.0:5000/mongo:5.0.6-focal
+    image: mongo:5.0.6-focal
     networks:
       - mongo
     volumes:
@@ -91,7 +91,7 @@ services:
           - node.labels.mongo.replica == c-03
 
   q-01:
-    image: 127.0.0.0:5000/mongo:5.0.6-focal
+    image: mongo:5.0.6-focal
     networks:
       - mongo
       - mongos
@@ -106,7 +106,7 @@ services:
           - node.labels.mongo.replica == q-01
 
   q-02:
-    image: 127.0.0.0:5000/mongo:5.0.6-focal
+    image: mongo:5.0.6-focal
     networks:
       - mongo
       - mongos

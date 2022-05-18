@@ -6,6 +6,8 @@
   import_tasks: install_python_modules.yml
 
 - name: expose Port 2375 for docker API
-  import_tasks: expose_port_for_docker_api.yml
+  block:
+    - import_tasks: expose_port_for_docker_api.yml
+    - import_tasks: copy_docker_config.yml
   notify:
     - Restart docker

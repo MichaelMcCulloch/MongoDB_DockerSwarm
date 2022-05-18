@@ -9,8 +9,4 @@
 
 - hosts: swarm_managers
   roles:
-    - docker_registry_service
-
-- hosts: swarm_managers
-  roles:
     - docker_mongo_stack
